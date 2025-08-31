@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <header class="header">
@@ -25,7 +27,7 @@
                 <a href="#about">Sobre</a>
             </nav>
             <div class="header-icons">
-                <i class='bx bx-cart'></i>
+                <i id="carrinho" class='bx bx-cart'></i>
             </div>
         </div>
     </header>
@@ -38,11 +40,10 @@
                     <span>Moda que cuida do futuro</span>
                     <h1>Vista-se de mudança com a nossa nova coleção</h1>
                     <p>Peças com design atemporal, feitas com materiais de baixo impacto e produção ética.</p>
-                    <a href="#products" class="btn">Comprar Agora</a>
+                    <a href="src/pages/produtos.html" class="btn">Comprar Agora</a>
                 </div>
             </div>
         </section>
-
         <section class="categories" id="categories">
             <div class="container">
                 <h2 class="section-title">Nossas Categorias</h2>
@@ -82,7 +83,7 @@
                         </div>
                     </div>
                     <div class="product-card">
-                         <div class="product-image">
+                        <div class="product-image">
                             <img src="src/imgs/vestido.png" alt="Produto 2">
                             <div class="product-icons">
                                 <i class='bx bx-cart-add'></i>
@@ -96,7 +97,7 @@
                         </div>
                     </div>
                     <div class="product-card">
-                         <div class="product-image">
+                        <div class="product-image">
                             <img src="src/imgs/calca.png" alt="Produto 3">
                             <div class="product-icons">
                                 <i class='bx bx-cart-add'></i>
@@ -110,7 +111,7 @@
                         </div>
                     </div>
                     <div class="product-card">
-                         <div class="product-image">
+                        <div class="product-image">
                             <img src="src/imgs/bolsa.png" alt="Produto 4">
                             <div class="product-icons">
                                 <i class='bx bx-cart-add'></i>
@@ -131,8 +132,10 @@
             <div class="container">
                 <div class="about-text">
                     <h2>Design consciente, do início ao fim.</h2>
-                    <p>Acreditamos que a moda pode ser uma força para o bem. Por isso, escolhemos materiais sustentáveis, valorizamos a produção local e criamos peças feitas para durar, não para serem descartadas.</p>
-                    <a href="#" class="btn">Saiba Mais</a>
+                    <p>Acreditamos que a moda pode ser uma força para o bem. Por isso, escolhemos materiais
+                        sustentáveis, valorizamos a produção local e criamos peças feitas para durar, não para serem
+                        descartadas.</p>
+                    <a href="src/pages/produtos.html" class="btn" style=" font-weight: bold;">Ver Coleção Completa</a>
                 </div>
             </div>
         </section>
@@ -144,7 +147,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <a href="#" class="logo">
-                        <i class='bx bxs-leaf'></i>  EcoTrend
+                        <i class='bx bxs-leaf'></i> EcoTrend
                     </a>
                     <p>Moda sustentável que inspira um futuro mais verde e consciente.</p>
                 </div>
@@ -157,7 +160,7 @@
                         <li><a href="#about">Sobre</a></li>
                     </ul>
                 </div>
-                 <div class="footer-col">
+                <div class="footer-col">
                     <h3>Contato</h3>
                     <ul>
                         <li><i class='bx bxs-map'></i> São Paulo, SP</li>
@@ -165,7 +168,7 @@
                         <li><i class='bx bxs-envelope'></i> contato@ecotrend.com</li>
                     </ul>
                 </div>
-                 <div class="footer-col">
+                <div class="footer-col">
                     <h3>Newsletter</h3>
                     <p>Receba nossas novidades e promoções.</p>
                     <form class="newsletter-form">
@@ -179,6 +182,16 @@
             <p>&copy; 2025 EcoTrend. Todos os direitos reservados.</p>
         </div>
     </footer>
+    <div id="cartSidebar">
+        <h2>Meu Carrinho</h2>
+        <div id="cartItems"></div>
+        <hr>
+        <div class="cart-total">Total: R$ <span id="cartTotal">0.00</span></div>
+        <button style="background-color: rgb(0, 173, 9);" onmouseover="this.style.backgroundColor='green'" onmouseout="this.style.backgroundColor='rgb(0, 173, 9)'" class="close-btn">Finalizar Compra</button>
+        <button onclick="closeCart()" class="close-btn">Fechar</button>
+    </div>
 
 </body>
+<script src="src/js/script.js"></script>
+
 </html>

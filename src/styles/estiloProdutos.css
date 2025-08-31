@@ -1,0 +1,134 @@
+.sidebar {
+    position: sticky;
+    top: 80px;
+    width: 250px;
+    padding: 25px;
+    background-color: #f8f9fa;
+    height: fit-content;
+}
+
+
+.sidebar h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e9ecef;
+    color: #2c5446;
+}
+
+.filter-group {
+    margin-bottom: 25px;
+}
+
+.filter-group h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #343a40;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #495057;
+    transition: color 0.2s ease;
+    position: relative;
+    padding-left: 25px;
+}
+
+.filter-group input[type="checkbox"] {
+    display: none;
+}
+
+.filter-group label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #adb5bd;
+    border-radius: 3px;
+    background-color: #fff;
+    transition: all 0.2s ease;
+}
+
+.filter-group label::after {
+    content: '\2713';
+    position: absolute;
+    left: 3px;
+    top: 1px;
+    font-size: 14px;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.filter-group label:hover {
+    color: #2c5446;
+}
+
+.filter-group label:hover::before {
+    border-color: #2c5446;
+}
+
+.filter-group input[type="checkbox"]:checked+label::before {
+    background-color: #2c5446;
+    border-color: #2c5446;
+}
+
+.filter-group input[type="checkbox"]:checked+label::after {
+    opacity: 1;
+}
+
+.main-content {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sidebar {
+    margin-top: 80px;
+    position: sticky;
+    top: 80px;
+    width: 250px;
+    padding: 25px;
+    background-color: #f8f9fa;
+    height: fit-content;
+}
+
+.products-page {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        padding: 15px;
+        gap: 25px;
+    }
+
+    .sidebar {
+        position: static;
+        margin-top: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .sidebar h3 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .filter-group h4 {
+        margin-bottom: 20px;
+    }
+}

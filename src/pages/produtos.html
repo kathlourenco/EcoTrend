@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/estiloProdutos.css">
+    <link rel="shortcut icon" href="../imgs/favicon.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="../../index.html" class="logo">
+                <i class='bx bxs-leaf'></i> EcoTrend
+            </a>
+            <div class="header-icons">
+                <i class='bx bx-cart' id="carrinho"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="sidebar">
+            <h3>Filtrar Produtos</h3>
+
+            <div class="filter-group">
+                <h4>Categoria</h4>
+                <input type="checkbox" id="roupas" value="Roupas">
+                <label for="roupas">Roupas</label>
+
+                <input type="checkbox" id="acessorios" value="Acessórios">
+                <label for="acessorios">Acessórios</label>
+
+                <input type="checkbox" id="casa" value="Casa">
+                <label for="casa">Casa</label>
+
+                <input type="checkbox" id="beleza" value="Beleza">
+                <label for="beleza">Beleza</label>
+
+                <input type="checkbox" id="tecnologia" value="Tecnologia">
+                <label for="tecnologia">Tecnologia</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Preço</h4>
+                <input type="checkbox" id="preco1" value="0-50">
+                <label for="preco1">R$0 - R$50</label>
+
+                <input type="checkbox" id="preco2" value="51-150">
+                <label for="preco2">R$50 - R$150</label>
+
+                <input type="checkbox" id="preco3" value="151-300">
+                <label for="preco3">R$150 - R$300</label>
+
+                <input type="checkbox" id="preco4" value="301+">
+                <label for="preco4">R$300+</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Material</h4>
+                <input type="checkbox" id="algodao" value="Algodão">
+                <label for="algodao">Algodão</label>
+
+                <input type="checkbox" id="linho" value="Linho">
+                <label for="linho">Linho</label>
+
+                <input type="checkbox" id="juta" value="Juta">
+                <label for="juta">Juta</label>
+
+                <input type="checkbox" id="tencel" value="Tencel">
+                <label for="tencel">Tencel</label>
+            </div>
+        </div>
+        <section class="products-page">
+            <div class="container">
+                <h2 class="section-title">Todos os Produtos</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../imgs/bolsaAlgodao.png" alt="Bolsa de Algodão">
+                            <div class="product-icons">
+                                <i class='bx bx-cart-add'></i>
+                                <i class='bx bx-heart'></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category-name">Acessórios Sustentáveis</span>
+                            <h3>Bolsa de Algodão</h3>
+                            <div class="product-price">R$ 79,90</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../imgs/ecoBag.png" alt="Bolsa de Algodão Orgânico">
+                            <div class="product-icons">
+                                <i class='bx bx-cart-add'></i>
+                                <i class='bx bx-heart'></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category-name">Acessórios Sustentáveis</span>
+                            <h3>Bolsa de Algodão Orgânico</h3>
+                            <div class="product-price">R$ 149,90</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../imgs/bolsa.png" alt="Bolsa de Ombro Artesanal">
+                            <div class="product-icons">
+                                <i class='bx bx-cart-add'></i>
+                                <i class='bx bx-heart'></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category-name">Juta</span>
+                            <h3>Bolsa de Ombro Artesanal</h3>
+                            <div class="product-price">R$ 149,90</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../imgs/camisa.png" alt="Camisa Branca Essencial">
+                            <div class="product-icons">
+                                <i class='bx bx-cart-add'></i>
+                                <i class='bx bx-heart'></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category-name">Algodão Orgânico</span>
+                            <h3>Camisa Branca Essencial</h3>
+                            <div class="product-price">R$ 189,90</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../imgs/camisaAlgodao.png" alt="Camiseta Básica">
+                            <div class="product-icons">
+                                <i class='bx bx-cart-add'></i>
+                                <i class='bx bx-heart'></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category-name">Roupas Sustentáveis</span>
+                            <h3>Camiseta Básica</h3>
+                            <div class="product-price">R$ 99,90</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../imgs/camisaEcologica.png" alt="Camiseta Ecológica">
+                            <div class="product-icons">
+                                <i class='bx bx-cart-add'></i>
+                                <i class='bx bx-heart'></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category-name">Roupas Sustentáveis</span>
+                            <h3>Camiseta Ecológica</h3>
+                            <div class="product-price">R$ 129,90</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../imgs/calca.png" alt="Calça Pantalona Verde">
+                            <div class="product-icons">
+                                <i class='bx bx-cart-add'></i>
+                                <i class='bx bx-heart'></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category-name">Tencel</span>
+                            <h3>Calça Pantalona Verde</h3>
+                            <div class="product-price">R$ 299,90</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../imgs/copoReutilizavel.png" alt="Copo Reutilizável">
+                            <div class="product-icons">
+                                <i class='bx bx-cart-add'></i>
+                                <i class='bx bx-heart'></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category-name">Casa Sustentável</span>
+                            <h3>Copo Reutilizável</h3>
+                            <div class="product-price">R$ 12,90</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../imgs/creme.png" alt="Creme Hidratante">
+                            <div class="product-icons">
+                                <i class='bx bx-cart-add'></i>
+                                <i class='bx bx-heart'></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category-name">Cuidados Pessoais</span>
+                            <h3>Creme Hidratante</h3>
+                            <div class="product-price">R$ 34,90</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="..//imgs/cremeVerde.png" alt="Creme Hidratante Orgânico">
+                            <div class="product-icons">
+                                <i class='bx bx-cart-add'></i>
+                                <i class='bx bx-heart'></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category-name">Cuidados Pessoais</span>
+                            <h3>Creme Hidratante Orgânico</h3>
+                            <div class="product-price">R$ 49,90</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../imgs/garrafaEstampa.png" alt="Garrafa Reutilizável">
+                            <div class="product-icons">
+                                <i class='bx bx-cart-add'></i>
+                                <i class='bx bx-heart'></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category-name">Tecnologia Verde</span>
+                            <h3>Garrafa Reutilizável</h3>
+                            <div class="product-price">R$ 24,90</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../imgs/garrafa.png" alt="Garrafa Reutilizável">
+                            <div class="product-icons">
+                                <i class='bx bx-cart-add'></i>
+                                <i class='bx bx-heart'></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category-name">Tecnologia Sustentável</span>
+                            <h3>Garrafa Reutilizável</h3>
+                            <div class="product-price">R$ 69,90</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../imgs/abajur.png" alt="Lâmpada LED">
+                            <div class="product-icons">
+                                <i class='bx bx-cart-add'></i>
+                                <i class='bx bx-heart'></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category-name">Tecnologia Verde</span>
+                            <h3>Lâmpada LED</h3>
+                            <div class="product-price">R$ 29,90</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../imgs/lampadaLED.png" alt="Lâmpada LED Sustentável">
+                            <div class="product-icons">
+                                <i class='bx bx-cart-add'></i>
+                                <i class='bx bx-heart'></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category-name">Tecnologia Verde</span>
+                            <h3>Lâmpada LED Sustentável</h3>
+                            <div class="product-price">R$ 89,90</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../imgs/saboneteFolha.png" alt="Sabonete Artesanal">
+                            <div class="product-icons">
+                                <i class='bx bx-cart-add'></i>
+                                <i class='bx bx-heart'></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category-name">Beleza Natural</span>
+                            <h3>Sabonete Artesanal</h3>
+                            <div class="product-price">R$ 14,90</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="..//imgs/sabonete.png" alt="Sabonete Natural">
+                            <div class="product-icons">
+                                <i class='bx bx-cart-add'></i>
+                                <i class='bx bx-heart'></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category-name">Beleza Natural</span>
+                            <h3>Sabonete Natural</h3>
+                            <div class="product-price">R$ 19,90</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../imgs/toalhaAlgodao.png" alt="Toalha de Algodão Orgânico">
+                            <div class="product-icons">
+                                <i class='bx bx-cart-add'></i>
+                                <i class='bx bx-heart'></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category-name">Itens para Casa</span>
+                            <h3>Toalha de Algodão Orgânico</h3>
+                            <div class="product-price">R$ 79,90</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../imgs/velaArtesanal.png" alt="Vela Artesanal">
+                            <div class="product-icons">
+                                <i class='bx bx-cart-add'></i>
+                                <i class='bx bx-heart'></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category-name">Itens para Casa</span>
+                            <h3>Vela Artesanal</h3>
+                            <div class="product-price">R$ 19,90</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="..//imgs/vela.png" alt="Vela de Cera Natural">
+                            <div class="product-icons">
+                                <i class='bx bx-cart-add'></i>
+                                <i class='bx bx-heart'></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category-name">Casa Sustentável</span>
+                            <h3>Vela de Cera Natural</h3>
+                            <div class="product-price">R$ 39,90</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../imgs/vestido.png" alt="Vestido Midi">
+                            <div class="product-icons">
+                                <i class='bx bx-cart-add'></i>
+                                <i class='bx bx-heart'></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category-name">Linho Misto</span>
+                            <h3>Vestido Midi</h3>
+                            <div class="product-price">R$ 329,90</div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" style="margin-top: 80px;">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo">
+                        <i class='bx bxs-leaf'></i> EcoTrend
+                    </a>
+                    <p>Moda sustentável que inspira um futuro mais verde e consciente.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html#home">Início</a></li>
+                        <li><a href="index.html#categories">Categorias</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="index.html#about">Sobre</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><i class='bx bxs-map'></i> São Paulo, SP</li>
+                        <li><i class='bx bxs-phone'></i> (11) 99999-8888</li>
+                        <li><i class='bx bxs-envelope'></i> contato@ecotrend.com</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Receba nossas novidades e promoções.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Seu e-mail">
+                        <button type="submit" class="btn"><i class='bx bxs-paper-plane'></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 EcoTrend. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <div id="cartSidebar">
+        <h2>Meu Carrinho</h2>
+        <div id="cartItems"></div>
+        <hr>
+        <div class="cart-total">Total: R$ <span id="cartTotal">0.00</span></div>
+        <button style="background-color: rgb(0, 173, 9);" onmouseover="this.style.backgroundColor='green'"
+            onmouseout="this.style.backgroundColor='rgb(0, 173, 9)'" class="close-btn">Finalizar Compra</button>
+        <button onclick="closeCart()" class="close-btn">Fechar</button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const products = document.querySelectorAll('.product-card');
+
+            const categoryCheckboxes = document.querySelectorAll('#roupas, #acessorios, #casa, #beleza, #tecnologia');
+            const materialCheckboxes = document.querySelectorAll('#algodao, #linho, #juta, #tencel');
+            const priceCheckboxes = document.querySelectorAll('#preco1, #preco2, #preco3, #preco4');
+
+            function deriveCategory(product) {
+                if (product.dataset.category) return product.dataset.category;
+
+                const catText = (product.querySelector('.category-name')?.innerText || '').toLowerCase();
+                const title = (product.querySelector('h3')?.innerText || '').toLowerCase();
+
+                const map = [
+                    { keys: ['roup', 'camiseta', 'camisa', 'calça', 'calca', 'vestid', 'pantalona', 't-shirt', 'tshirt'], val: 'Roupas' },
+                    { keys: ['acessor', 'bolsa', 'chapéu', 'chapeu', 'cinto', 'carteira'], val: 'Acessórios' },
+                    { keys: ['casa', 'vela', 'toalha', 'copo', 'pano', 'panos', 'itens para casa', 'copo reutilizavel'], val: 'Casa' },
+                    { keys: ['beleza', 'sabonete', 'creme', 'shampoo', 'óleo', 'oleo'], val: 'Beleza' },
+                    { keys: ['tecnolog', 'lâmpada', 'lampada', 'garrafa', 'painel', 'carregador'], val: 'Tecnologia' }
+                ];
+
+                for (const m of map) {
+                    if (m.keys.some(k => catText.includes(k) || title.includes(k))) return m.val;
+                }
+                return '';
+            }
+
+            function deriveMaterial(product) {
+                if (product.dataset.material) return product.dataset.material;
+
+                const catText = (product.querySelector('.category-name')?.innerText || '').toLowerCase();
+                const materials = {
+                    'algodão': 'Algodão',
+                    'algodao': 'Algodão',
+                    'linho': 'Linho',
+                    'juta': 'Juta',
+                    'tencel': 'Tencel'
+                };
+
+                for (const k in materials) {
+                    if (catText.includes(k)) return materials[k];
+                }
+                return '';
+            }
+
+            function filterProducts() {
+                const selectedCategories = Array.from(categoryCheckboxes).filter(cb => cb.checked).map(cb => cb.value);
+                const selectedMaterials = Array.from(materialCheckboxes).filter(cb => cb.checked).map(cb => cb.value);
+                const selectedPrices = Array.from(priceCheckboxes).filter(cb => cb.checked).map(cb => cb.value);
+
+                products.forEach(product => {
+                    const prodCategory = deriveCategory(product);
+                    const prodMaterial = deriveMaterial(product);
+                    const priceText = product.querySelector('.product-price')?.innerText || 'R$ 0';
+                    const prodPrice = parseFloat(priceText.replace('R$', '').replace('.', '').replace(',', '.')) || 0;
+
+                    const categoryMatch = selectedCategories.length === 0 || (prodCategory && selectedCategories.includes(prodCategory));
+
+                    const materialMatch = selectedMaterials.length === 0 || (prodMaterial && selectedMaterials.includes(prodMaterial));
+
+                    let priceMatch = selectedPrices.length === 0;
+                    if (!priceMatch) {
+                        for (const range of selectedPrices) {
+                            if (range === '301+') {
+                                if (prodPrice >= 301) { priceMatch = true; break; }
+                            } else {
+                                const [min, max] = range.split('-').map(Number);
+                                if (prodPrice >= min && prodPrice <= max) { priceMatch = true; break; }
+                            }
+                        }
+                    }
+
+                    product.style.display = (categoryMatch && materialMatch && priceMatch) ? 'block' : 'none';
+                });
+            }
+
+            [...categoryCheckboxes, ...materialCheckboxes, ...priceCheckboxes].forEach(cb => cb.addEventListener('change', filterProducts));
+
+            filterProducts();
+        });
+
+    </script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

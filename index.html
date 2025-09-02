@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EcoTrend</title>
     <link rel="stylesheet" href="src/styles/style.css" />
-    <link rel="shortcut icon" href="src/imgs/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/src/imgs/favicon.png" type="image/x-icon" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -53,15 +53,15 @@
           <h2 class="section-title">Nossas Categorias</h2>
           <div class="category-grid">
             <div class="category-card">
-              <img src="src/imgs/mulher.jpg" alt="Roupas Femininas" />
+              <img src="/src/imgs/mulher.jpg" alt="Roupas Femininas" />
               <h3>Roupas Femininas</h3>
             </div>
             <div class="category-card">
-              <img src="src/imgs/homem.jpg" alt="Roupas Masculinas" />
+              <img src="/src/imgs/homem.jpg" alt="Roupas Masculinas" />
               <h3>Roupas Masculinas</h3>
             </div>
             <div class="category-card">
-              <img src="src/imgs/homem2.jpg" alt="Acessórios" />
+              <img src="/src/imgs/homem2.jpg" alt="Acessórios" />
               <h3>Acessórios</h3>
             </div>
           </div>
@@ -74,7 +74,7 @@
           <div class="product-grid">
             <div class="product-card">
               <div class="product-image">
-                <img src="src/imgs/camisa.png" alt="Produto 1" />
+                <img src="/src/imgs/camisa.png" alt="Produto 1" />
                 <div class="product-icons">
                   <i class="bx bx-cart-add"></i>
                   <i class="bx bx-heart"></i>
@@ -88,7 +88,7 @@
             </div>
             <div class="product-card">
               <div class="product-image">
-                <img src="src/imgs/vestido.png" alt="Produto 2" />
+                <img src="/src/imgs/vestido.png" alt="Produto 2" />
                 <div class="product-icons">
                   <i class="bx bx-cart-add"></i>
                   <i class="bx bx-heart"></i>
@@ -102,7 +102,7 @@
             </div>
             <div class="product-card">
               <div class="product-image">
-                <img src="src/imgs/calca.png" alt="Produto 3" />
+                <img src="/src/imgs/calca.png" alt="Produto 3" />
                 <div class="product-icons">
                   <i class="bx bx-cart-add"></i>
                   <i class="bx bx-heart"></i>
@@ -116,7 +116,7 @@
             </div>
             <div class="product-card">
               <div class="product-image">
-                <img src="src/imgs/bolsa.png" alt="Produto 4" />
+                <img src="/src/imgs/bolsa.png" alt="Produto 4" />
                 <div class="product-icons">
                   <i class="bx bx-cart-add"></i>
                   <i class="bx bx-heart"></i>
@@ -203,7 +203,7 @@
         style="background-color: rgb(0, 173, 9)"
         onmouseover="this.style.backgroundColor='green'"
         onmouseout="this.style.backgroundColor='rgb(0, 173, 9)'"
-        class="close-btn"
+        class="close-btn" onclick="location.href='src/pages/checkout.html'"
       >
         Finalizar Compra
       </button>
@@ -212,7 +212,7 @@
   </body>
   <script>
     document.addEventListener("DOMContentLoaded", async () => {
-      const API = "/api/produtos"; // se sua página NÃO for servida pelo mesmo host/porta do Node, use: 'http://localhost:3000/api/produtos'
+      const API = "/api/produtos"; 
       const grid = document.querySelector(".products .product-grid");
 
       async function carregarProdutos() {
@@ -221,7 +221,7 @@
           const txt = await res.text();
           throw new Error(`HTTP ${res.status} → ${txt.slice(0, 120)}...`);
         }
-        return res.json(); // esperado: [{ id, nome, preco, material?, categoria?, imagem? }]
+        return res.json(); 
       }
 
       function criarCard(p) {
@@ -229,7 +229,7 @@
         const preco = Number(p.preco ?? 0);
         const material = p.material ?? "";
         const categoria = p.categoria ?? "";
-        const imagem = p.imagem ?? "src/imgs/bolsa.png"; // ajuste para um placeholder existente
+        const imagem = p.imagem ?? "/src/imgs/bolsa.png";
 
         const card = document.createElement("div");
         card.className = "product-card";
@@ -258,8 +258,6 @@
       try {
         const produtos = await carregarProdutos();
 
-        // Se quiser substituir os cards estáticos pelos da API:
-        // (se preferir manter os estáticos, remova a linha abaixo)
         grid.innerHTML = "";
 
         produtos.forEach((p) => grid.appendChild(criarCard(p)));

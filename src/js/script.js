@@ -1,3 +1,4 @@
+
 const cartBtn = document.querySelectorAll('.bx-cart-add');
 const cartSidebar = document.getElementById('cartSidebar');
 const cartItems = document.getElementById('cartItems');
@@ -55,7 +56,7 @@ cartBtn.forEach(btn => {
         const card = e.target.closest('.product-card');
         const name = card.querySelector('h3').innerText;
         const price = parseFloat(card.querySelector('.product-price').innerText.replace('R$ ', '').replace(',', '.'));
-        const imgSrc = card.querySelector('img').src;
+        const imgSrc = card.querySelector("img").getAttribute("src");
 
         carrinho.push({ name, price, imgSrc });
         localStorage.setItem("carrinho", JSON.stringify(carrinho));
@@ -65,7 +66,7 @@ cartBtn.forEach(btn => {
 
         if (!document.getElementById("btnLimpar")) {
             const btnLimpar = document.createElement('button');
-            btnLimpar.id = "btnLimpar"; // ID para evitar duplicação
+            btnLimpar.id = "btnLimpar";
             btnLimpar.innerText = "Limpar Carrinho";
             btnLimpar.style.display = "block";
             btnLimpar.style.margin = "20px auto";
